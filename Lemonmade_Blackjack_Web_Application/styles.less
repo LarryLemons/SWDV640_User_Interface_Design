@@ -1,0 +1,205 @@
+@primary-color: forestgreen;
+@secondary-color: whitesmoke;
+@hover-color: goldenrod;
+@text-color: darkgreen;
+@button-color: orange;
+@footer-color: #ccc;
+
+/* Mixins */
+.button-style(@width, @height, @bg-color, @text-color) {
+  width: @width;
+  height: @height;
+  background-color: @bg-color;
+  color: @text-color;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background-color: lighten(@bg-color, 10%);
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* General Styles */
+body {
+  background-color: @secondary-color;
+  font-family: Arial, sans-serif;
+}
+
+.row {
+  display: grid;
+}
+
+h1 {
+  font-size: 2.5vw;
+  color: @primary-color;
+}
+
+.title {
+  margin-top: 2%;
+  text-align: center;
+  color: @primary-color;
+}
+
+/* Images */
+.lounge-img {
+  width: 30%;
+  height: 30%;
+  border-radius: 5%;
+}
+
+.img-position {
+  text-align: center;
+}
+
+.logo-img {
+  margin-left: 0.75%;
+  width: 55px;
+  height: 55px;
+  border-radius: 70%;
+  margin-top: -2%;
+  border-width: 2px;
+  border-color: @primary-color;
+  border-style: solid;
+}
+
+/* Navigation */
+.topnav {
+  background-color: white;
+  border-radius: 1%;
+  a {
+    padding: 0 16px;
+    font-size: 17px;
+    text-decoration: none;
+    color: @text-color;
+    &:hover {
+      background-color: @secondary-color;
+      color: @hover-color;
+    }
+  }
+}
+
+
+/* Buttons */
+.double-btn {
+  .button-style(66px, auto, @button-color, white);
+}
+
+.contact-button {
+  margin-left: 35%;
+  .button-style(120px, 40px, @primary-color, white);
+}
+
+// .game-button {
+//   .button-style(65px, auto, @primary-color, white);
+// }
+
+/* Footer */
+footer {
+  margin-top: 10%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  color: @footer-color;
+}
+
+/* Specific Sections */
+.blackjack-table {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.blackjack-table-img {
+  width: 50%;
+  height: 50%;
+  margin-right: -25%;
+}
+
+.game-results {
+  width: 30%;
+  height: 31vw;
+  border-radius: 5%;
+}
+
+.div-game-results {
+  margin-top: -37vw;
+  margin-left: 2%;
+}
+
+.rules-margin {
+  margin-left: 2%;
+}
+
+.text-rules {
+  margin-left: 1.5%;
+}
+
+.itext-rules {
+  margin-left: 3%;
+}
+
+/* Containers */
+.lcontainer {
+  display: flex; /* Flexbox for equal-width columns */
+}
+
+.box {
+  width: 25vw; /* 1/3 of the page */
+  height: 31vw; /* Example height */
+  text-align: center;
+  line-height: 200px;
+  background-color: white;
+  border: 1px solid @footer-color;
+}
+
+.marginl {
+  margin-left: 21%;
+  margin-right: 7%;
+  margin-top: 1.5%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.big-box {
+  width: 38vw; /* 1/3 of the page */
+  height: 31vw; /* Example height */
+  line-height: 200px;
+  background-color: white;
+  border: 1px solid @footer-color;
+  margin-top: 1.5%;
+}
+
+.topRanked-text,
+.text-leader {
+  margin-top: -4vw;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.text-cat {
+  margin-top: -8vw;
+  margin-left: 2vw;
+  font-weight: bold;
+  font-size: medium;
+}
+
+/* Text */
+.red-text {
+  color: red;
+}
+
+.contact-style {
+  width: 30%;
+  margin-left: 35%;
+}

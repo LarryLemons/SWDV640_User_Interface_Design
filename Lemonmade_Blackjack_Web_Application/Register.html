@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"  href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg topnav">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="Index.html">
+          <img class="logo-img" src="images/logo.png" alt="Lemonmade Blackjack Lounge Logo" ">
+        </a>
+
+        <!-- Hamburger Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Index.html" aria-label="Home Page Link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Gameplay.html" aria-label="Game Play Link">Gameplay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Rules.html" aria-label="Tips and Rules Link">Tips & Rules</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Leaderboard.html" aria-label="Leaderboard Link">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ContactUs.html" aria-label="Contact Us Link">Contact Us</a>
+            </li>
+          </ul>
+          <!-- Login/Register Buttons -->
+          <div class="d-flex">
+            <a class="btn btn-outline-primary me-2" href="Register.html" aria-label="Register Link">Register</a>
+            <a class="btn btn-secondary" href="Login.html" aria-label="Login Link">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="title">
+      <h1>Register New Account</h1>
+    </div>
+    <div class="login-style">
+      <form>
+        <div class="grid mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" aria-placeholder="enteryouremail@example.com"
+              placeholder="enteryouremail@example.com">
+          </div>
+        </div>
+        <div class="grid mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label" aria-label="Enter Your Password">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3">
+          </div>
+        </div>
+        <div class="grid mb-3">
+          <label for="inputPassword3" class="col-form-label" aria-label="Confirm password">Confirm Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary register-btn" aria-label="Submit button">Submit</button>
+      </form>
+    </div>
+    <footer aria-label="Lemonmade Blackjack footer">©️ The Lemonade Blackjack Lounge</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

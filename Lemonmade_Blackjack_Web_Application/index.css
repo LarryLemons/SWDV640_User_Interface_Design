@@ -1,0 +1,223 @@
+.row {
+    display: grid;
+}
+
+h1 {
+    font-size: 2.5vw;
+}
+
+.title {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.lounge-img{
+    width: 30%;
+    height: 30%;
+    border-radius: 5%;
+}
+
+.img-position {
+    text-align: center;
+}
+
+footer {
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav {
+    background-color:white;
+    color:black;
+    border-radius: 1%;
+    color: forestgreen;
+  }
+
+  .a{
+    padding-left:14px;
+    padding-right: 16px;
+    font-size: 17px;
+    text-decoration: none;
+    color: darkgreen;
+  }
+
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: whitesmoke;
+    color: goldenrod;
+  }
+
+  body {
+    background-color: whitesmoke;
+  }
+
+  .login-register {
+    text-align: right;
+    margin-top: 1%;
+  }
+
+  .marginr {
+    margin-right: 10px;
+  }
+  .marginr {
+    margin-left: 10px;
+  }
+
+  .blackjack-table {
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  .blackjack-table-img{
+    width: 50%;
+    height: 50%;
+    margin-right: -25%;
+  }
+
+  .game-results {
+    width: 30%;
+    height: 31vw;
+    border-radius: 5%;
+  }
+
+  .div-game-results {
+    margin-top: -37vw;
+    margin-left: 2%;
+  }
+
+  .game-buttons {
+    margin-left: 26%;
+    margin-top: 5px;
+  }
+
+  .game-button {
+    width: 65px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .login-style {
+    margin-top: 2%;
+    width: 30%;
+    margin-left: 38%;
+  }
+
+  .red-text {
+    color: red;
+  }
+
+  .rules-margin {
+    margin-left: 2%
+  }
+
+  .text-rules {
+    margin-left:1.5%
+  }
+
+  .itext-rules {
+    margin-left: 3%;
+  }
+
+  .box {
+    width: 25vw; /* 1/3 of the page */
+    height: 31vw; /* Example height */
+    text-align: center;
+    line-height: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.marginl {
+    margin-left: 21%;
+    margin-right: 7%;
+    margin-top: 1.5%;
+
+}
+
+.lcontainer {
+    display: flex; /* Flexbox for equal-width columns */
+}
+
+.big-box {
+    width: 38vw; /* 1/3 of the page */
+    height: 31vw; /* Example height */
+    line-height: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 1.5%;
+}
+
+.topRanked-text {
+    margin-top: -4vw;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.text-leader {
+    margin-top: -4vw;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.text-cat {
+    margin-top: -8vw;
+    margin-left: 2vw;
+    /* text-decoration: underline; */
+    font-weight: bold;
+    font-size: medium;
+
+}
+
+.contact-style {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.contact-button {
+    margin-left: 35%;
+}
+
+.double-btn{
+    color: white;
+    background-color: orange;
+    width: 66px;
+}
+
+.logo-img{
+    margin-left: .75%;
+    width: 55px;
+    height: 55px;
+    border-radius: 70%;
+    margin-top: -2%;
+    border-width: 2px;
+    border-color: forestgreen;
+    border-style: solid;
+}
+
+.hide-a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    margin-left: 1%;
+}
+
+
+
+
+
+
+
+
