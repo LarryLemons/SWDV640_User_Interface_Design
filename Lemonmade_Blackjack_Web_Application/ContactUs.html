@@ -1,73 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
 
-<body>
+    <style>
+      /* Add optional styles for hidden buttons */
+      .hidden {
+        display: none; /* Completely hides the element */
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg topnav">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="Index.html">
-                <img class="logo-img" src="images/logo.png" alt="Lemonmade Blackjack Lounge Logo">
-            </a>
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="Index.html">
+          <img
+            class="logo-img"
+            src="images/logo.png"
+            alt="Lemonmade Blackjack Lounge Logo"
+          />
+        </a>
 
-            <!-- Hamburger Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Hamburger Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto topnav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Index.html" aria-label="Home Page Link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Gameplay.html" aria-label="Game Play Link">Gameplay</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Rules.html" aria-label="Tips and Rules Link">Tips & Rules</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Leaderboard.html" aria-label="Leaderboard Link">Leaderboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="ContactUs.html" aria-label="Contact Us Link">Contact Us</a>
-                    </li>
-                </ul>
-                <!-- Login/Register Buttons -->
-                <div class="d-flex">
-                    <a class="btn btn-outline-primary me-2" href="Register.html" aria-label="Register Link">Register</a>
-                    <a class="btn btn-secondary" href="Login.html" aria-label="Login Link">Login</a>
-                </div>
-            </div>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto topnav">
+            <li class="nav-item">
+              <a class="nav-link" href="Index.html" aria-label="Home Page Link"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="Gameplay.html"
+                aria-label="Game Play Link"
+                >Gameplay</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="Rules.html"
+                aria-label="Tips and Rules Link"
+                >Tips & Rules</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="Leaderboard.html"
+                aria-label="Leaderboard Link"
+                >Leaderboard</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="ContactUs.html"
+                aria-label="Contact Us Link"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <!-- Login/Register Buttons -->
+          <div class="d-flex">
+            <a
+              class="btn btn-outline-primary me-2"
+              href="Register.html"
+              aria-label="Register Link"
+              id="registerButton"
+              >Register</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="Login.html"
+              aria-label="Login Link"
+              id="loginButton"
+              >Login</a
+            >
+            <script id="greetingTemplate" type="x-tmpl-mustache">
+              Hello {{username}}
+            </script>
+            <div id="greeting"></div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const userName = "Larry Lemons";
+
+                const data = { username: userName };
+
+                const template =
+                  document.getElementById("greetingTemplate").innerHTML;
+                const rendered = Mustache.render(template, data);
+
+                document.getElementById("greeting").innerHTML = rendered;
+                // Logic to disable buttons if the greeting is shown
+                const greetingContainer = document.getElementById("greeting");
+                const loginButton = document.getElementById("loginButton");
+                const registerButton =
+                  document.getElementById("registerButton");
+
+                if (greetingContainer.innerHTML.trim() !== "") {
+                  loginButton.style.display = "none";
+                  registerButton.style.display = "none";
+                }
+              });
+            </script>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Page Content -->
-    <h1 class="center-text title" aria-label="Contact Us Heading">Contact Us</h1>
+    <h1 class="center-text title" aria-label="Contact Us Heading">
+      Contact Us
+    </h1>
     <div class="mb-3 contact-style">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enteryouremail@example.com"
-            aria-placeholder="enteryouremail@example.com">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="enteryouremail@example.com"
+        aria-placeholder="enteryouremail@example.com"
+      />
     </div>
     <div class="mb-3 contact-style">
-        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" aria-label="Text area for message"
-            rows="3"></textarea>
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Message</label
+      >
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        aria-label="Text area for message"
+        rows="3"
+      ></textarea>
     </div>
-    <button class="btn btn-primary contact-button" aria-label="Submit button"> Submit</button>
-    <footer aria-label="Lemonmade Blackjack footer">©️ The Lemonade Blackjack Lounge</footer>
+    <button class="btn btn-primary contact-button" aria-label="Submit button">
+      Submit
+    </button>
+    <footer aria-label="Lemonmade Blackjack footer">
+      ©️ The Lemonade Blackjack Lounge
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
